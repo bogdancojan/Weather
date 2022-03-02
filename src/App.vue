@@ -51,9 +51,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin: auto;
-  width: 50%;
+  height: 100vh;
+  border: solid;
+  background-image: linear-gradient(to bottom right, #02c39a, #277da1);
 }
 
 .container-main {
@@ -71,12 +71,15 @@ input {
   margin: 8px 0;
   border-radius: 16px;
   border: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
 }
 
 input:focus {
   outline: none;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 </style>

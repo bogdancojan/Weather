@@ -17,6 +17,12 @@
           />
           <img
             style="margin: 10px"
+            src="../../public/snow.png"
+            class="img-fluid rounded-start"
+            v-else-if="weather.weather[0].main == 'Snow'"
+          />
+          <img
+            style="margin: 10px"
             src="../assets/clouds.png"
             class="img-fluid rounded-start"
             v-else-if="weather.weather[0].main == 'Clouds'"
@@ -35,7 +41,7 @@
         </div>
       </div>
       <div class="col-md-8">
-        <div class="card-body" style="margin-top: 60px">
+        <div class="card-body" style="margin-top: 90px">
           <h5 class="card-title">
             {{ weather.name }}, {{ weather.sys.country }}
           </h5>
@@ -96,7 +102,6 @@ export default {
 </script>
 
 <style scoped>
-h2,
 p,
 h5 {
   color: #868383;
@@ -107,15 +112,19 @@ h2 {
   font-size: 32px;
   line-height: 50px;
   font-weight: 900;
+  color: #868383;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   transition: 0.3s;
   border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px);
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 </style>
